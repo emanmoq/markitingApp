@@ -44,29 +44,32 @@ jQuery(function ($) {
   $(".navbar .nav-link").click(function(){
     $(".collapse").removeClass("show");
   });
-  $('.workSlider').owlCarousel({
+  $('.clientCarousel').owlCarousel({
     autoplay: true,
     loop: false,
-    margin: 20,
-    nav: false,
+    nav: true,
     rtl:true,
-    dots:true,
-    responsive: {
-      0: {
-        items: 1,
-
-      },
-      600: {
-        items: 2,
-      },
-      1000: {
-        items: 4,
-
-      }
-      
-
-    }
+    dots:false,
+    items:1,
   });
+    // declare rating 
+    $(".my-rating").starRating({
+      starSize: 16,
+      rtl: true,
+      activeColor: '#FFAE01',
+      hoverColor: '#F9D674',
+      ratedColor: '#FEAA25',
+      emptyColor: 'rgba(254, 170, 37, .5)',
+      starShape: 'rounded',
+      strokeColor:'#FEAA25',
+      useGradient: false,
+      disableAfterRate: true,
+      initialRating: 4,
+      readOnly: true,
+
+  
+      callback: function (currentRating, $el) { }
+    });
   
 });
 

@@ -67,6 +67,7 @@ position: fixed;
 top:0;
 left:0;
 width:100%;
+z-index: 999999999;
 }
 
 .fa-phone{
@@ -156,10 +157,6 @@ height: 45px;;
 }
 .navbar-expand-lg .navbar-nav{
     width:70%;
-}
-
-.heroSection{
-    padding-top:70px;
 }
 
 .heroText h5{
@@ -385,7 +382,7 @@ svg{
     margin-left:30px;
 }
 .clientName{
-    width:70%;
+    width:50%;
     float: right;
     margin-top:20px;
 }
@@ -471,8 +468,10 @@ button:focus{
     display: inline-block;
     margin-left:40px;
 }
-.footerMenu li a{
+
+.footerMenu li .nav-link{
     color:white;
+    padding:0;
 }
 .footer .subscribeBox{
 width:450px;
@@ -499,24 +498,26 @@ background-color: white;
 }
 
 
+
 @media(min-width:300px) and (max-width:767px){
     .leftHeadet{
         text-align: right;
     }
-    .topHeader{
-        height: auto;
-    }
+
     header,.scrollNav{
         padding:15px 0;
+        background-color: white;
+        width:100%;;
     }
-    .heroSection{
-        padding-top:20px
-    }
-    .contactHeader li{
-        margin-left:0;
-    }
-    .services{
-        padding:50px 0;
+.footer .subscribeBox{
+width:100%;
+}
+.propBox{
+    margin-bottom: 20px;;
+}
+
+    .choose,.build,.clients,.Features{
+        padding:30px 0;
     }
     body{
         font-size:12px
@@ -528,18 +529,10 @@ background-color: white;
     .about, .clients{
         padding:20px 0;
     }
-    .counterBox{
-        margin-bottom:20px;
-    }
-    .margintop{
-        margin-top:0;
-    }
-.sendBtn{
-    width:100%;
-}
 
     .hero{
         padding:20px 0;
+        padding-top:100px;
     }
     header .subscribeBox{
         width:100%;
@@ -552,22 +545,10 @@ background-color: white;
         width: 113px;
     }
 
-
-.startIcon:before{
-    display: none;
-}
    footer{
        padding:20px 0;
    }
-    .socialIcons{
-        text-align: right;
-        margin-top:20px;
-        margin-bottom:20px;
-    }
 
-    .heroText{
-        margin-top: 0px;
-    }
     button.navbar-toggler {
         position: relative;
         border: none;
@@ -600,27 +581,42 @@ margin-bottom:50px;
         margin-bottom:10px;
         margin-top:10px;
     }
+    .featureIcon{
+        width:70px;
+        height: 70px;
+        padding:10px;
+    }
+    .clientMap{
+        margin-top:0
+    }
 }
 
 @media(min-width:768px) and (max-width:1023px){
     body{
         font-size:13px
     }
+    .navbar-expand-lg .navbar-nav .nav-item {
+        padding: 15px 10px;
+    }
 
 .services{
     padding:50px 0
 }
-footer{
-    padding:20px 0;
+.Features{
+    padding:50px 0;
+
 }
-.about{
+.choose{
     padding:50px 0;
 }
-.contactUs{
-    padding:50px 0
+.build{
+    padding:50px 0;
 }
 .clients{
     padding:50px 0;
+}
+header{
+    padding-top:0;
 }
 .sectionTitle{
     margin-bottom:50px;
@@ -632,22 +628,14 @@ footer{
 header .subscribeBox{
     width:300px;
 }
-
-
-    .socialIcons{
-        text-align: center;
-    }
-    .socialIcons li{
-        float: none;
-    }
-  .marginBox{
-      margin-top:0;
-  }
-    .heroText{
-        margin-top: 20px;
-    }
-
-
+.featureList li{
+    margin-bottom:30px
+}
+.featureIcon{
+    width:70px;
+    height: 70px;
+    padding:10px;
+}
     .navbar-expand-lg .navbar-collapse{
         display: flex;
         flex-basis: auto;
@@ -660,9 +648,15 @@ header .subscribeBox{
         width:100%;
         margin-top:20px;
     }
-    .contactForm{
-        padding:10px;
-    }
+.downloadBtn{
+    width:140px;
+}
+.Download{
+    padding-bottom: 50px;;
+}
+.footerMenu li{
+    margin-left:10px;
+}
          .navbar-nav {
             display: -ms-flexbox;
             display: flex;}
@@ -676,4 +670,21 @@ header .subscribeBox{
 .work{
     padding:50px 0;
 }
+}
+@media(min-width:1023px) and (max-width:1200px){
+    .Features{
+        padding:70px 0;
+    }
+    .choose{
+        padding:50px;
+    }
+    .build{
+        padding:50px 0;
+    }
+    .clients{
+        padding:50px 0;
+    }
+    .Download{
+        padding-bottom: 50px;
+    }
 }
